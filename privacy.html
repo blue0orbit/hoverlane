@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoverlane privacy policy</title>
+<style>
+:root { --bg: #0e0b1e; --ink: #ecebff; --mut: #b7b3d9; --acc: #22e4ff; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 system-ui, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 26px; margin: 0 0 4px; } .draft { color: #ffb020; font-weight: 700; margin: 0 0 20px; }
+h2 { font-size: 19px; margin-top: 28px; color: var(--acc); } p, li { color: var(--ink); } code { color: var(--acc); }
+a { color: var(--acc); } li { margin: 4px 0; }
+</style></head><body><main>
+<h1>Hoverlane privacy policy</h1>
+<p><strong>Hoverlane privacy policy</strong> Effective date: 22 October 2026 · Publisher: Blue0orbit · Contact: blue0orbit@gmail.com</p>
+<p>Hoverlane is a game for VR headsets, Android phones and web browsers. You can play it without an account, and we do not want to know who you are. This policy explains what the game keeps on your device, what it sends online when the online features are on, and how to switch them off or delete your data.</p>
+<h2>Short version</h2>
+<ul>
+<li>No accounts, no advertising, no selling of data. We never ask for your real name, email, phone number or location.</li>
+<li>Online features are on by default and can be switched off in Settings &gt; Online. When they are off, the game sends nothing (no leaderboards, no crash reports, no statistics).</li>
+<li>If you use the leaderboards, other players see the name you picked from our word lists (like &quot;Neon Comet 482&quot;), your scores and your best runs as ghosts.</li>
+<li>Play statistics (Google Analytics) are only sent if you say yes. Crash reports (Android app) are on by default and can be switched off.</li>
+<li>Settings &gt; Online &gt; Delete my online data removes everything stored online about you, at once.</li>
+</ul>
+<h2>What the game stores on your device</h2>
+<p>To keep your progress, Hoverlane saves the following in the app&#x27;s own storage on your device:</p>
+<ul>
+<li>progress: scores, coins, unlocks, missions, route stars, daily-run results and statistics;</li>
+<li>settings: volume, comfort and control options, accessibility options, your online choices;</li>
+<li>run recordings: your inputs during recent runs (lane, boost, brake and similar), used for replays and to race your own ghost;</li>
+<li>activity estimate (optional): if you enter a body weight in Settings, the game uses it on the device to estimate calories for your runs. It is never sent anywhere and is not medical advice;</li>
+<li>online copies: your leaderboard name, scores waiting to be sent, and the leaderboards you looked at recently;</li>
+<li>an error log (the last 30 errors) to help with support; it stays on the device.</li>
+</ul>
+<p>You can delete all of it at any time by clearing the app&#x27;s data or uninstalling the game (in a browser: clearing the site&#x27;s data). If you have turned on your device&#x27;s own backup (for example Android backup), your device provider may include the app&#x27;s storage in that backup under its own privacy terms.</p>
+<h2>What is sent online, and why</h2>
+<p>Hoverlane uses Google Firebase, a service of Google, for its online features. Google processes this data for us as our service provider. When the online features are on:</p>
+<ul>
+<li><strong>Anonymous ID.</strong> Firebase Authentication gives your copy of the game a random ID (an &quot;anonymous account&quot;). It is not linked to your name, email, phone number or store account. It lets you update your own scores and nobody else&#x27;s.</li>
+<li><strong>Leaderboard name.</strong> A name you build from two preset words and a number the game picks (for example &quot;Neon Comet 482&quot;). There is no free text, so it cannot contain personal information.</li>
+<li><strong>Scores.</strong> For each leaderboard you play (Daily Run, endless zones, Radio Hits songs, route challenges): your best score, when you set it, the game version and the kind of device (VR, phone or PC).</li>
+<li><strong>Ghost recordings.</strong> For your best score on each leaderboard, a recording of your inputs in that run (lane position, boost, brake, duck and similar, many times a second), so other players can race your run as a ghost. In VR your steering comes from how you lean, so the recording reflects the lane you steered to; it does not contain raw head or hand tracking, voice or images.</li>
+<li><strong>Game settings from us (Remote Config).</strong> The game asks Firebase now and then (at most twice a day) for settings such as a message of the day or whether leaderboards are open. This uses a Firebase installation ID (a random ID for this copy of the app) and basic app information (app version, language).</li>
+<li><strong>Crash reports (Android app; on by default, Settings &gt; Online &gt; Send crash reports).</strong> If the game crashes or hits an error, Firebase Crashlytics sends a report: what went wrong (error message and stack trace), the game version and what it was doing (for example &quot;in a run&quot;), the device model, Android and WebView version, free memory and disk space, a Crashlytics installation ID, your anonymous ID and a short list of recent game events (such as &quot;run started&quot;). We use it only to find and fix bugs.</li>
+<li><strong>Play statistics (optional; only if you say yes, Settings &gt; Online &gt; Share play statistics).</strong> Google Analytics for Firebase receives events such as &quot;run started / ended&quot; (mode, zone, run length, a score range, crashed or not), tutorial progress, garage purchases (which item), which setting was changed and which leaderboard was opened, with an app-instance ID, device and operating system type, app version, language and the country / region Google derives from your IP address. Advertising features, ad personalisation and Google signals are off. We use it to see which parts of the game are fun or too hard.</li>
+<li><strong>Network data.</strong> Like any online service, Google receives your IP address and basic technical data when the game connects. We do not store your IP address in our data.</li>
+</ul>
+<p>Everyone who plays Hoverlane online can see the leaderboards: names, scores, when they were set, and the ghosts of the best runs. Nothing else about you is visible to other players. We do not sell your data, use it for advertising, or share it with anyone except Google as our service provider (and authorities where the law requires it).</p>
+<p><strong>Legal bases (EU / UK).</strong> Leaderboards, ghosts and game settings: to provide the online features you use (contract / legitimate interest); you can switch them off at any time. Crash reports: our legitimate interest in a game that works; you can switch them off. Play statistics: your consent, which you can withdraw in Settings at any time.</p>
+<h2>Where the data is stored</h2>
+<p>Leaderboards, names and ghosts are stored in Google Cloud Firestore in the European Union (multi-region &quot;eur3&quot;, Belgium and the Netherlands). Firebase Authentication, Remote Config, Crashlytics and Google Analytics may process data in the United States and other countries where Google operates; Google protects such transfers with the EU Standard Contractual Clauses and the EU-U.S. Data Privacy Framework. See Google&#x27;s <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy information</a>.</p>
+<h2>How long it is kept</h2>
+<ul>
+<li>Leaderboard name, scores and ghosts: as long as the leaderboard exists, or until you delete them. We may remove old Daily Run leaderboards after 90 days.</li>
+<li>Anonymous ID: until you delete your online data (it is not deleted automatically).</li>
+<li>Crash reports: 90 days (Crashlytics).</li>
+<li>Play statistics: 2 months (Google Analytics data retention), then only aggregated totals remain.</li>
+<li>Remote Config / installation ID: until you clear the app&#x27;s data; Google deletes unused installation data on its own schedule.</li>
+</ul>
+<h2>Your choices and deleting your data</h2>
+<ul>
+<li><strong>Switch off the online features:</strong> Settings &gt; Online. The game then sends nothing at all; your progress on the device is not affected.</li>
+<li><strong>Switch off crash reports or play statistics</strong> separately in the same place, at any time.</li>
+<li><strong>Delete your online data:</strong> Settings &gt; Online &gt; Delete my online data. This deletes, right away, your scores and ghosts on every leaderboard, your leaderboard name and your anonymous ID, and clears the online copies on your device. Do this <strong>before uninstalling</strong>: uninstalling or clearing the app&#x27;s data makes the game forget its anonymous ID, after which it cannot prove the scores are yours. If that happened, email us at blue0orbit@gmail.com with your leaderboard name (and roughly when and what you played) and we will remove the entries by hand.</li>
+<li>Crash reports and play statistics already sent are kept only for the periods above; email us to have them deleted sooner.</li>
+</ul>
+<h2>Head and hand tracking (VR)</h2>
+<p>In VR the game reads your headset and controller or hand positions through the headset&#x27;s standard WebXR interface, in real time, to steer, duck, grab and show your gloves. Raw tracking data is not recorded, stored or sent anywhere.</p>
+<h2>No camera, microphone or precise location</h2>
+<p>Hoverlane does not access them.</p>
+<h2>Stores and the web version</h2>
+<p>When you download or buy Hoverlane, the store you use (PICO Store, Meta Horizon Store, Google Play) processes your account and purchase details under its own privacy policy; we receive only anonymous sales and install totals from them. If you play the web version (also used by the Meta Quest app), our web host (GitHub Pages, a service of GitHub, Inc.) receives standard technical data needed to deliver the game files, such as your IP address and browser type, and may keep it in short-lived server logs for security; we do not use it to identify or track you. After the first start the game runs from your device&#x27;s cache.</p>
+<h2>Children</h2>
+<p>Hoverlane is not directed at children under 13. The online features ask for no personal information: names come from preset words, and play statistics are only sent with consent.</p>
+<h2>Your rights</h2>
+<p>You can ask us for a copy of your data, to correct or delete it, or object to its use: blue0orbit@gmail.com. Because we only know your anonymous ID, please send your leaderboard name so we can find your entries. If you are in the EU/EEA or UK you may also contact your data protection authority.</p>
+<h2>Changes</h2>
+<p>If a future version changes what the game sends, we will update this policy before that version is released and change the effective date above.</p>
+</main></body></html>
