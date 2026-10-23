@@ -10,7 +10,7 @@ h2 { font-size: 19px; margin-top: 28px; color: var(--acc); } p, li { color: var(
 a { color: var(--acc); } li { margin: 4px 0; }
 </style></head><body><main>
 <h1>Hoverlane privacy policy</h1>
-<p><strong>Hoverlane privacy policy</strong> Effective date: 22 October 2026 · Publisher: Blue0orbit · Contact: blue0orbit@gmail.com</p>
+<p><strong>Hoverlane privacy policy</strong> Effective date: 23 October 2026 · Publisher: Blue0orbit · Contact: blue0orbit@gmail.com</p>
 <p>Hoverlane is a game for VR headsets, Android phones and web browsers. You can play it without an account, and we do not want to know who you are. This policy explains what the game keeps on your device, what it sends online when the online features are on, and how to switch them off or delete your data.</p>
 <h2>Short version</h2>
 <ul>
@@ -28,6 +28,7 @@ a { color: var(--acc); } li { margin: 4px 0; }
 <li>run recordings: your inputs during recent runs (lane, boost, brake and similar), used for replays and to race your own ghost;</li>
 <li>activity estimate (optional): if you enter a body weight in Settings, the game uses it on the device to estimate calories for your runs. It is never sent anywhere and is not medical advice;</li>
 <li>online copies: your leaderboard name, scores waiting to be sent, and the leaderboards you looked at recently;</li>
+<li>streamer options (only if you use them): your streamer mode settings and, if you connect Twitch, a Twitch sign-in token (see &quot;Twitch&quot; below); in VR, the run codes you saved to make a clip later;</li>
 <li>an error log (the last 30 errors) to help with support; it stays on the device.</li>
 </ul>
 <p>You can delete all of it at any time by clearing the app&#x27;s data or uninstalling the game (in a browser: clearing the site&#x27;s data). If you have turned on your device&#x27;s own backup (for example Android backup), your device provider may include the app&#x27;s storage in that backup under its own privacy terms.</p>
@@ -38,6 +39,8 @@ a { color: var(--acc); } li { margin: 4px 0; }
 <li><strong>Leaderboard name.</strong> A name you build from two preset words and a number the game picks (for example &quot;Neon Comet 482&quot;). There is no free text, so it cannot contain personal information.</li>
 <li><strong>Scores.</strong> For each leaderboard you play (Daily Run, endless zones, Radio Hits songs, route challenges): your best score, when you set it, the game version and the kind of device (VR, phone or PC).</li>
 <li><strong>Ghost recordings.</strong> For your best score on each leaderboard, a recording of your inputs in that run (lane position, boost, brake, duck and similar, many times a second), so other players can race your run as a ghost. In VR your steering comes from how you lean, so the recording reflects the lane you steered to; it does not contain raw head or hand tracking, voice or images.</li>
+<li><strong>Shared run codes (optional).</strong> When you share a run&#x27;s code (like &quot;HL-HGKX-W9YX&quot;), the code, your score, the game mode, your leaderboard name and that run&#x27;s ghost recording are stored so friends who type the code can race your ghost on the same road.</li>
+<li><strong>Ghost Raid (optional, for streamers and their viewers).</strong> A streamer can open a raid on one of their run codes for a few hours. If you ride a raided code, your score, leaderboard name, device kind (VR, phone or PC) and a compact recording of your ride (where you were on the road over time) are added to that raid, so the streamer can race up to 200 viewers&#x27; ghosts and show &quot;Chat vs Streamer&quot; results. Raid entries are visible to everyone who opens that raid.</li>
 <li><strong>Game settings from us (Remote Config).</strong> The game asks Firebase now and then (at most twice a day) for settings such as a message of the day or whether leaderboards are open. This uses a Firebase installation ID (a random ID for this copy of the app) and basic app information (app version, language).</li>
 <li><strong>Crash reports (Android app; on by default, Settings &gt; Online &gt; Send crash reports).</strong> If the game crashes or hits an error, Firebase Crashlytics sends a report: what went wrong (error message and stack trace), the game version and what it was doing (for example &quot;in a run&quot;), the device model, Android and WebView version, free memory and disk space, a Crashlytics installation ID, your anonymous ID and a short list of recent game events (such as &quot;run started&quot;). We use it only to find and fix bugs.</li>
 <li><strong>Play statistics (optional; only if you say yes, Settings &gt; Online &gt; Share play statistics).</strong> Google Analytics for Firebase receives events such as &quot;run started / ended&quot; (mode, zone, run length, a score range, crashed or not), tutorial progress, garage purchases (which item), which setting was changed and which leaderboard was opened, with an app-instance ID, device and operating system type, app version, language and the country / region Google derives from your IP address. Advertising features, ad personalisation and Google signals are off. We use it to see which parts of the game are fun or too hard.</li>
@@ -59,11 +62,15 @@ a { color: var(--acc); } li { margin: 4px 0; }
 <ul>
 <li><strong>Switch off the online features:</strong> Settings &gt; Online. The game then sends nothing at all; your progress on the device is not affected.</li>
 <li><strong>Switch off crash reports or play statistics</strong> separately in the same place, at any time.</li>
-<li><strong>Delete your online data:</strong> Settings &gt; Online &gt; Delete my online data. This deletes, right away, your scores and ghosts on every leaderboard, your leaderboard name and your anonymous ID, and clears the online copies on your device. Do this <strong>before uninstalling</strong>: uninstalling or clearing the app&#x27;s data makes the game forget its anonymous ID, after which it cannot prove the scores are yours. If that happened, email us at blue0orbit@gmail.com with your leaderboard name (and roughly when and what you played) and we will remove the entries by hand.</li>
+<li><strong>Delete your online data:</strong> Settings &gt; Online &gt; Delete my online data. This deletes, right away, your scores and ghosts on every leaderboard, your shared run codes, the raids you opened and your entries in other raids, your leaderboard name and your anonymous ID, and clears the online copies on your device. Do this <strong>before uninstalling</strong>: uninstalling or clearing the app&#x27;s data makes the game forget its anonymous ID, after which it cannot prove the scores are yours. If that happened, email us at blue0orbit@gmail.com with your leaderboard name (and roughly when and what you played) and we will remove the entries by hand.</li>
 <li>Crash reports and play statistics already sent are kept only for the periods above; email us to have them deleted sooner.</li>
 </ul>
 <h2>Head and hand tracking (VR)</h2>
 <p>In VR the game reads your headset and controller or hand positions through the headset&#x27;s standard WebXR interface, in real time, to steer, duck, grab and show your gloves. Raw tracking data is not recorded, stored or sent anywhere.</p>
+<h2>Twitch (optional, streamer mode)</h2>
+<p>If you turn on streamer mode and connect a Twitch account for Chat Chaos (your viewers vote on events in your run), the game signs in to Twitch with Twitch&#x27;s device code: you approve it on Twitch&#x27;s own site, on any device. The game then gets a Twitch token that can only read chat (Twitch permission &quot;user:read:chat&quot;). The token stays on your device (and in your device backup, if you use one); we never receive it. During a chat run the game reads your channel&#x27;s chat directly from Twitch and counts votes such as &quot;!1&quot;; messages are counted on your device and are not stored, shown or sent anywhere. Disconnecting in Settings removes the token from the device and ends it at Twitch. Twitch processes your account under its own privacy notice. Chat runs never go on the normal leaderboards.</p>
+<h2>Clips</h2>
+<p>The 9:16 highlight clip of a run (phone and PC) is made on your device. It leaves your device only if you share or save it yourself, through your device&#x27;s share sheet or a download.</p>
 <h2>No camera, microphone or precise location</h2>
 <p>Hoverlane does not access them.</p>
 <h2>Stores and the web version</h2>
