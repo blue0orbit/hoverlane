@@ -1,0 +1,6 @@
+# Crawlers read robots.txt only at a host root. On GitHub Pages this file is served at /hoverlane/robots.txt and is
+# ignored until a custom domain points at this repository; then it applies as is (update the Sitemap URL to the domain).
+User-agent: *
+Allow: /
+
+Sitemap: https://blue0orbit.github.io/hoverlane/sitemap.xml

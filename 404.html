@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · Hoverbandit</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070818">
+<!-- GitHub Pages serves this page for every missing path, at any depth: the links are root-relative on purpose
+     (change /hoverlane/ to / when the site moves to its own domain) -->
+<link rel="icon" type="image/png" sizes="48x48" href="/hoverlane/icons/favicon-48.png">
+<style>
+  :root { --bg: #070818; --ink: #eef1fb; --mute: #a3aacb; --pink: #ff3d8b; --cyan: #22e4ff; --amber: #ffd23f; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    background: radial-gradient(120% 80% at 50% 0%, #241552 0%, var(--bg) 60%) fixed, var(--bg);
+    color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding: 0 max(16px, env(safe-area-inset-right)) 0 max(16px, env(safe-area-inset-left));
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 72px 0 56px; display: grid; gap: 22px; }
+  .tag { margin: 0; color: var(--amber); font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-size: 14px; }
+  h1 { margin: 0; font: italic 900 clamp(32px, 8vw, 56px)/1.05 "Segoe UI Black", "Arial Black", system-ui, sans-serif; }
+  p { margin: 0; max-width: 60ch; }
+  nav { display: flex; flex-wrap: wrap; gap: 18px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, .12); }
+  a { color: var(--cyan); }
+  a:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+  footer { color: var(--mute); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="tag">404</p>
+  <h1>Wrong lane</h1>
+  <p>This page does not exist. Swerve back to the road:</p>
+  <nav>
+    <a href="/hoverlane/">Hoverbandit home</a>
+    <a href="/hoverlane/press.html">Press kit</a>
+    <a href="/hoverlane/privacy.html">Privacy policy</a>
+  </nav>
+  <footer>© 2026 BlueOrbit</footer>
+</main>
+</body>
+</html>

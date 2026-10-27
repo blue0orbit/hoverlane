@@ -3,10 +3,74 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hoverlane</title>
-<meta name="description" content="Hoverlane: a neon hoverboard traffic runner for VR headsets and phones, by Blue0orbit.">
+<title>Hoverbandit: Hoverboard Runner for VR, Android and Web</title>
+<meta name="description" content="Ride a neon hoverboard through rush-hour traffic in this arcade endless runner for PICO, Meta Quest, Android XR, Android phones and the web browser.">
+<link rel="canonical" href="https://blue0orbit.github.io/hoverlane/">
+<meta name="robots" content="max-image-preview:large">
+<meta name="theme-color" content="#070818">
+<link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hoverbandit">
+<meta property="og:title" content="Hoverbandit: Hoverboard Runner for VR, Android and Web">
+<meta property="og:description" content="Neon hoverboard runner: lean through rush-hour traffic, chain near misses and boost. For VR headsets, Android and the browser.">
+<meta property="og:url" content="https://blue0orbit.github.io/hoverlane/">
+<meta property="og:image" content="https://blue0orbit.github.io/hoverlane/og-image.png">
+<!-- og-image.png (1200 x 630) and twitter-card.png (1200 x 600): cut from the owner's wide key art by the game repo's
+     tools/store/make-icons.mjs -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hoverbandit key art: Bandit the raccoon courier rides a glowing hoverboard through neon night traffic, with police cars, Nana Nitro, Hopper the frog and cartoon zombies">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hoverbandit: Hoverboard Runner for VR, Android and Web">
+<meta name="twitter:description" content="Neon hoverboard runner: lean through rush-hour traffic, chain near misses and boost. For VR headsets, Android and the browser.">
+<meta name="twitter:image" content="https://blue0orbit.github.io/hoverlane/twitter-card.png">
+<meta name="twitter:image:alt" content="Hoverbandit key art: Bandit the raccoon courier rides a glowing hoverboard through neon night traffic, with police cars, Nana Nitro, Hopper the frog and cartoon zombies">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blue0orbit.github.io/hoverlane/#publisher",
+      "name": "BlueOrbit",
+      "url": "https://blue0orbit.github.io/hoverlane/",
+      "logo": "https://blue0orbit.github.io/hoverlane/icons/icon-512.png"
+    },
+    {
+      "@type": ["VideoGame", "SoftwareApplication"],
+      "@id": "https://blue0orbit.github.io/hoverlane/#game",
+      "name": "Hoverbandit",
+      "alternateName": "Hoverbandit: Hoverboard Runner",
+      "description": "An arcade hoverboard runner: ride through rush-hour traffic, switch lanes, chain near misses, boost and grab a passing bus across 12 neon zones. Endless, Daily Run, Routes, police Pursuit, the Radio Hits rhythm mode and Rush Hour of the Dead, an opt-in cartoon zombie night. In VR you lean to steer, squat to duck and reach out to grab.",
+      "url": "https://blue0orbit.github.io/hoverlane/",
+      "image": [
+        "https://blue0orbit.github.io/hoverlane/og-image.png",
+        "https://blue0orbit.github.io/hoverlane/icons/icon-512.png"
+      ],
+      "genre": ["Endless runner", "Arcade", "Racing", "Rhythm"],
+      "gamePlatform": ["PICO", "Meta Quest", "Android XR", "Android", "Web browser"],
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Arcade runner",
+      "operatingSystem": "PICO OS, Meta Horizon OS, Android XR, Android, any modern web browser",
+      "playMode": "https://schema.org/SinglePlayer",
+      "inLanguage": ["en", "de", "fr", "es", "pt-BR", "ja", "ko", "zh-Hans", "ar"],
+      "publisher": { "@id": "https://blue0orbit.github.io/hoverlane/#publisher" },
+      "author": { "@id": "https://blue0orbit.github.io/hoverlane/#publisher" }
+    }
+  ]
+}
+</script>
+<!-- Add to the #game object only when true (docs/store/metadata/web.md in the game repo):
+  "offers" (once the price is set), "contentRating" (once IARC issues it), "datePublished" (release day),
+  "sameAs" (the store pages, once live) -->
 <style>
-  :root { --bg: #070818; --ink: #eef1fb; --mute: #a3aacb; --pink: #ff3d8b; --cyan: #22e4ff; --amber: #ffd23f; }
+  :root { --bg: #070818; --ink: #eef1fb; --mute: #a3aacb; --pink: #ff3d8b; --cyan: #22e4ff; --amber: #ffd23f; --line: rgba(255, 255, 255, .12); }
   * { box-sizing: border-box; }
   html, body { margin: 0; min-height: 100%; }
   body {
@@ -16,16 +80,23 @@
   }
   main { max-width: 680px; margin: 0 auto; padding: 72px 0 56px; display: grid; gap: 22px; }
   h1 {
-    margin: 0; font: italic 900 clamp(46px, 11vw, 84px)/1 "Segoe UI Black", "Arial Black", system-ui, sans-serif;
-    letter-spacing: -0.02em; background: linear-gradient(180deg, #fff 10%, var(--cyan) 55%, var(--pink) 95%);
+    margin: 0; font: italic 900 clamp(36px, 10.6vw, 80px)/1 "Segoe UI Black", "Arial Black", system-ui, sans-serif;
+    text-transform: uppercase; letter-spacing: -0.02em; padding-right: .08em;
+    background: linear-gradient(180deg, #fff 10%, var(--cyan) 55%, var(--pink) 95%);
     -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 40px rgba(255, 61, 139, .25);
   }
+  h2 { margin: 0 0 10px; color: var(--amber); font-size: 14px; letter-spacing: .18em; text-transform: uppercase; }
   .tag { margin: 0; color: var(--amber); font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-size: 14px; }
   p { margin: 0; max-width: 60ch; }
   .soon { color: var(--mute); }
   .platforms { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
   .platforms li { border: 1px solid rgba(34, 228, 255, .45); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px; }
-  nav { display: flex; flex-wrap: wrap; gap: 18px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, .12); }
+  .art { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); }
+  section { display: grid; gap: 22px; border-top: 1px solid var(--line); padding-top: 22px; }
+  section > div > p + p { margin-top: 10px; }
+  ul.modes { margin: 0; padding-left: 20px; max-width: 60ch; }
+  ul.modes li + li { margin-top: 4px; }
+  nav { display: flex; flex-wrap: wrap; gap: 18px; padding-top: 10px; border-top: 1px solid var(--line); }
   a { color: var(--cyan); }
   a:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
   footer { color: var(--mute); font-size: 14px; }
@@ -34,18 +105,48 @@
 <body>
 <main>
   <p class="tag">Lean. Duck. Don't blink.</p>
-  <h1>HOVERLANE</h1>
-  <p>Ride a hoverboard through rush-hour traffic. Lean to switch lanes, duck under barriers, grab a bus to slingshot
-    ahead and race other players' ghosts on daily leaderboards, all to a radio of synthwave, drum &amp; bass and lo-fi.</p>
+  <h1>Hoverbandit</h1>
+  <p>A neon arcade hoverboard runner for VR headsets, Android phones and the web browser. Ride through rush-hour
+    traffic: lean to switch lanes, duck under barriers, grab a bus to slingshot ahead and race other players' ghosts
+    on daily leaderboards, all to a radio of synthwave, drum &amp; bass and lo-fi.</p>
   <p class="soon">Coming to:</p>
   <ul class="platforms">
-    <li>PICO</li><li>Meta Quest</li><li>Google Play</li>
+    <li>PICO</li><li>Meta Quest</li><li>Android XR</li><li>Google Play</li><li>Web browser</li>
   </ul>
+  <img class="art" src="img/hero-1280.webp" srcset="img/hero-640.webp 640w, img/hero-1280.webp 1280w, img/hero-2000.webp 2000w"
+    sizes="(max-width: 800px) 100vw, 760px" width="2000" height="1129" fetchpriority="high"
+    alt="Hoverbandit key art: Bandit the raccoon courier rides a glowing hoverboard through neon night traffic, with police cars, Nana Nitro, Hopper the frog and cartoon zombies">
+  <section>
+    <div>
+      <h2>How to play</h2>
+      <p>Hoverbandit is an arcade endless runner on a hoverboard. Switch lanes through rush-hour traffic, skim past cars
+        to chain near misses, boost when the road opens and grab a passing bus to slingshot ahead. In VR you lean your
+        body to steer, squat to duck and reach out to grab, with controllers or hand tracking, standing or seated. On a
+        phone you swipe; in the browser you use the keys.</p>
+    </div>
+    <div>
+      <h2>Modes</h2>
+      <ul class="modes">
+        <li>Endless runs through 12 zones, from Neon Night and Neon Tokyo to Snow Pass and Hollow Woods</li>
+        <li>Daily Run and Daily Mixtape: the same three mods for everyone, then race your ghost on the leaderboard</li>
+        <li>Routes: 48 hand-made challenges with three stars each, and Pursuit, a police chase with rising heat</li>
+        <li>Radio Hits, a rhythm mode where traffic moves to the beat of 15 songs</li>
+        <li>Rush Hour of the Dead, an opt-in cartoon zombie night (comedy, no gore)</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Comfort options, stream-safe music</h2>
+      <p>Comfort presets (vignette, lane snap, speed cap) and seated play are built in. All music is generated in code,
+        so there is no licensed music in your stream, and Chat Chaos lets Twitch chat vote on what hits your ride.
+        Plays offline. 9 languages.</p>
+    </div>
+  </section>
   <nav>
+    <a href="press.html">Press kit</a>
     <a href="privacy.html">Privacy policy</a>
     <a href="mailto:blue0orbit@gmail.com">blue0orbit@gmail.com</a>
   </nav>
-  <footer>© 2026 Blue0orbit</footer>
+  <footer>© 2026 BlueOrbit</footer>
 </main>
 </body>
 </html>
